@@ -24,7 +24,7 @@
   - name: update dnf repo index
     dnf:
        update_cache: yes
-     when: ansible_distribution == "CentOS"
+    when: ansible_distribution == "CentOS"
  
   - name: install httpd package
     dnf:

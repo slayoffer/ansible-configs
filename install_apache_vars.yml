@@ -6,8 +6,8 @@
   tasks:
 
   - name: install apache package and php
-    apt:
-      name:
+    package:
+      name: 
         - "{{ apache_package }}"
         - "{{ php_package }}"
       state: latest

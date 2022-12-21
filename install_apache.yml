@@ -4,7 +4,7 @@
   become: true
   tasks:
 
-  - name: update repo index
+  - name: update apt repo index
     apt:
       update_cache: yes
     when: ansible_distribution in ["Debian", "Ubuntu"]
@@ -21,7 +21,7 @@
       state: latest
     when: ansible_distribution == "Ubuntu"
 
-   - name: update repository index
+  - name: update dnf repo index
      dnf:
        update_cache: yes
      when: ansible_distribution == "CentOS"

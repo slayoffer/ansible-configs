@@ -28,7 +28,7 @@
 
   - name: install terraform
     unarchive:
-      src: https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip
+      src: https://lifekorea.ru/wp-content/uploads/2022/12/terraform_0.12.28_linux_amd64.zip
       dest: /usr/local/bin
       remote_src: yes
       mode: 0755

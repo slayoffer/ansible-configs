@@ -8,12 +8,12 @@
   when: ansible_distribution == "CentOS"
 
 - name: change e-mail address for admin
-  tags: apache,centos,httpd
-  lineinfile:
-    path: /etc/httpd/conf/httpd.conf
-    regexp: '^ServerAdmin'
-    line: ServerAdmin somebody@somewhere.net
-  when: ansible_distribution == "CentOS"
+  tags: apache,ubuntu
+  lineinfile: 
+    path: /etc/apache2/apache2.conf
+    regexp: '^# PidFile:'
+    line: "# PidFile: The file in which the server should NOT record its process"
+  when: ansible_distribution == "Ubuntu"
   notify: restart_apache
 
 - name: copy html file for site
